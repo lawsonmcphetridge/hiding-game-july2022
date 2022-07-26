@@ -22,6 +22,8 @@ header {
 
 main {
     padding: 20px;
+    display: flex;
+justify-content: space-evenly;
 }
 
 footer {
@@ -33,3 +35,44 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+
+.first-cup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+    border: solid 1px white;
+    height: 500px;
+}
+.second-cup {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px rgb(112, 18, 18);
+    height: 500px;
+}
+
+.third-cup {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px rgb(197, 113, 113);
+    height: 500px;
+}
+
+.cup-image {
+    display: flex;
+    height: 400px;
+}
+
+.guess-count {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+
+
+
