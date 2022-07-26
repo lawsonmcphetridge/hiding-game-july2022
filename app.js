@@ -33,16 +33,32 @@ secondButtonEl.addEventListener('click', () => {
 thirdButtonEl.addEventListener('click', () => {
     const hidingCup = Math.floor(Math.random() * hidingLogo.length);
     const hidingSpot = hidingLogo[hidingCup];
-  handleGuess(hidingSpot, 'thirdCup');
+    handleGuess(hidingSpot, 'thirdCup');
 });
 
+
+
+
+function clearCheck() {
+  cupOneEl.classList.remove('check-mark')
+  cupTwoEl.classList.remove('check-mark');
+  cupThreeEl.classList.remove('check-mark');
+}
+
+
 function handleGuess(userGuess, correctSpot) {
-   totalGuesses++;
+  clearCheck();
+    totalGuesses++;
     totalEl.textContent = totalGuesses;
+
+    if (userGuess === 'firstCup') {
+        cupOneEl.classList.add('check-mark');
+    } else if (userGuess === 'secondCup') {
+        cupTwoEl.classList.add('check-mark');
+    } else if (userGuess === 'thirdCup') {
+        cupThreeEl.classList.add('check-mark');
+  }
   
-
-
-
 
 
 
