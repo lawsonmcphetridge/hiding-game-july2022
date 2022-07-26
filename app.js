@@ -11,7 +11,7 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
-const hidingLogo = ['firstCup', 'secondCup', 'thirdCup']
+const hidingLogo = ['firstCup', 'secondCup', 'thirdCup'];
 
 let totalGuesses = 0;
 let wins = 0;
@@ -19,37 +19,43 @@ let losses = 0;
 
 // let state
 firstButtonEl.addEventListener('click', () => {
-  const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-  const hidingSpot = hidingCup[hidingLogo];
-  handleGuess(hidingSpot, 'firstCup')
-
+    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
+    const hidingSpot = hidingLogo[hidingCup];
+    handleGuess(hidingSpot, 'firstCup');
 });
 
 secondButtonEl.addEventListener('click', () => {
-  const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-  const hidingSpot = hidingLogo[hidingCup];
-  handleGuess(hidingSpot, 'secondCup')
+    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
+    const hidingSpot = hidingLogo[hidingCup];
+    handleGuess(hidingSpot, 'secondCup');
 });
 
 thirdButtonEl.addEventListener('click', () => {
-  const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-  const hidingSpot = hidingCup[hidingLogo];
-  handleGuess(hidingSpot, 'thirdCup')
+    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
+    const hidingSpot = hidingLogo[hidingCup];
+  handleGuess(hidingSpot, 'thirdCup');
 });
 
-
 function handleGuess(userGuess, correctSpot) {
+   totalGuesses++;
+    totalEl.textContent = totalGuesses;
+  
 
-  if (correctSpot === 'first cup') {
-  cupOneEl.src=
+
+
+
+
+
+
+    if (correctSpot === userGuess) {
+        wins++;
+    } else {
+        losses++;
+    }
+
+    lossesEl.textContent = losses;
+    winsEl.textContent = wins;
 }
-
-
-
-}
-
-
-
 
 // set event listeners
 // get user input

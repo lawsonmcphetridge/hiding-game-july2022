@@ -38,16 +38,16 @@ footer {
 
 .first-cup {
     border: solid 1px white;
-    height: 500px;
+    height: 400px;
 }
 .second-cup {
     border: solid 1px rgb(112, 18, 18);
-    height: 500px;
+    height: 400px;
 }
 
 .third-cup {
     border: solid 1px rgb(197, 113, 113);
-    height: 500px;
+    height: 400px;
 }
 
 .cup-image {
@@ -61,9 +61,11 @@ footer {
     height: 100px;
 }
 
-.emoji {
-    content: '😂';
-    position: absolute;
+.logo {
+    width: 300px;
+    height: 500px;
+    background-color: blue;
+    margin: auto;
 }
 
 
