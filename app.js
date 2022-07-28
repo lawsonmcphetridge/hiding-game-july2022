@@ -2,6 +2,9 @@
 const firstButtonEl = document.getElementById('first-button');
 const secondButtonEl = document.getElementById('second-button');
 const thirdButtonEl = document.getElementById('third-button');
+const cupOneCup = document.getElementById('cup-one-cup');
+const cupTwoCup = document.getElementById('cup-two-cup');
+const cupThreeCup = document.getElementById('cup-three-cup');
 
 const cupOneEl = document.getElementById('cup-one');
 const cupTwoEl = document.getElementById('cup-two');
@@ -36,32 +39,25 @@ thirdButtonEl.addEventListener('click', () => {
     handleGuess(hidingSpot, 'thirdCup');
 });
 
-
-
-
 function clearCheck() {
-  cupOneEl.classList.remove('check-mark')
-  cupTwoEl.classList.remove('check-mark');
-  cupThreeEl.classList.remove('check-mark');
+    console.log(cupOneCup);
+    cupOneCup.src = './assets/coffee_cup.png';
+    cupTwoCup.src = './assets/coffee_cup.png';
+    cupThreeCup.src = './assets/coffee_cup.png';
 }
 
-
 function handleGuess(userGuess, correctSpot) {
-  clearCheck();
+    clearCheck();
     totalGuesses++;
     totalEl.textContent = totalGuesses;
 
     if (userGuess === 'firstCup') {
-        cupOneEl.classList.add('check-mark');
+        cupOneCup.src = './assets/starbucks_cup.jpg';
     } else if (userGuess === 'secondCup') {
-        cupTwoEl.classList.add('check-mark');
+        cupTwoCup.src = './assets/starbucks_cup.jpg';
     } else if (userGuess === 'thirdCup') {
-        cupThreeEl.classList.add('check-mark');
-  }
-  
-
-
-
+       cupThreeCup.src = './assets/starbucks_cup.jpg';
+    }
 
     if (correctSpot === userGuess) {
         wins++;
