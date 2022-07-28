@@ -26,6 +26,10 @@ main {
     justify-content: center;
 }
 
+.project{
+    display: flex;
+}
+
 footer {
     position: sticky;
     bottom: 0;
@@ -67,6 +71,10 @@ footer {
 .guessing-section {
     display: flex;
     flex-direction: column;
+}
+
+.cup-first {
+    display: flex;
 }
 
 
