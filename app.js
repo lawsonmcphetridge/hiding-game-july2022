@@ -22,21 +22,18 @@ let losses = 0;
 
 // let state
 firstButtonEl.addEventListener('click', () => {
-    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-    const hidingSpot = hidingLogo[hidingCup];
+   const hidingSpot = getRandomItem(hidingLogo);
     handleGuess(hidingSpot, 'firstCup');
 });
 
 secondButtonEl.addEventListener('click', () => {
-    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-    const hidingSpot = hidingLogo[hidingCup];
-    handleGuess(hidingSpot, 'secondCup');
+ const hidingSpot = getRandomItem(hidingLogo);
+ handleGuess(hidingSpot, 'secondCup');
 });
 
 thirdButtonEl.addEventListener('click', () => {
-    const hidingCup = Math.floor(Math.random() * hidingLogo.length);
-    const hidingSpot = hidingLogo[hidingCup];
-    handleGuess(hidingSpot, 'thirdCup');
+  const hidingSpot = getRandomItem(hidingLogo);
+  handleGuess(hidingSpot, 'thirdCup');
 });
 
 function clearCheck() {
@@ -67,6 +64,12 @@ function handleGuess(userGuess, correctSpot) {
 
     lossesEl.textContent = losses;
     winsEl.textContent = wins;
+}
+
+function getRandomItem(arr) {
+ const randomIndex = Math.floor(Math.random() * arr.length);
+    const randomItem = arr[randomIndex];
+    return randomItem;
 }
 
 // set event listeners
